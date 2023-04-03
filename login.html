@@ -20,8 +20,8 @@
     <!-- 건너뛰기 링크 시작 -->
     <!-- wrapper 영역 시작 -->
     <div id="wrapper">
-        <!-- 헤더 영역 시작 -->
-        <header id="header">
+         <!-- 헤더 영역 시작 -->
+         <header id="header">
             <h1 class="logo">
                 <a href="index.html"><img src="images/logo.gif" alt="Q-net"></a>
             </h1>
@@ -42,7 +42,7 @@
                     <li><a href="#">원격지원</a></li>
                 </ul>           
                 <ul class="infoLink">
-                    <li><a href=<a href="http://m.q-net.or.kr" target="_blank" title="본 링크를 클릭하시면 새 창이 열립니다.">모바일앱</a></li>
+                    <li><a href="http://m.q-net.or.kr" target="_blank" title="본 링크를 클릭하시면 새 창이 열립니다.">모바일앱</a></li>
                     <li><a href="login.html" title="로그인 화면으로 이동합니다">로그인</a></li>
                     <li><a href="join.html" title="회원가입 화면으로 이동합니다">회원가입</a></li>
                     <li><a href="#">English</a></li>
@@ -94,16 +94,16 @@
             <!-- 메인메뉴 영역 시작 -->
             <nav id="nav">
                 <h2 class="hidden">메인메뉴</h2>
+                <div class="subMenu_bg"></div>
+                <button id="btnTotalMenu" class="total" type="button">
+                    <img src="images/btn_menu_b.png" alt="전체메뉴"><span class="hidden">전체메뉴</span>
+                </button>
                 <ul class="mainMenu">
-                    <div class="subMenu_bg"></div>
-                    <button id="btnTotalMenu" class="total" type="button">
-                        <img src="images/btn_menu_b.png" alt="전체메뉴"><span class="hidden">전체메뉴</span>
-                    </button>
                     <li><a href="#">국가자격시험</a>
-                        <div class="sub01">
+                        <div class="sub00">
                             <ul class="subMenu subMenu01">
-                                <li class="on"><a href="#">원서접수</a>
-                                    <ul class="subM01">
+                                <li><a href="#">원서접수</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">원서접수안내</a></li>
                                         <li><a href="#">원서접수신청</a></li>
                                         <li><a href="#">원서접수현황</a></li>
@@ -111,7 +111,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">합격자/답안발표</a>
-                                    <ul class="subM02">
+                                    <ul class="ssubM">
                                         <li><a href="#">합격자발표조회</a></li>
                                         <li><a href="#">응시서류불합격자발표</a></li>
                                         <li><a href="#">가답안/확정답안</a></li>
@@ -119,13 +119,13 @@
                                         <li><a href="#">전문자격 2차시험 의견제시</a></li>
                                     </ul></li>
                                 <li><a href="#">시험일정</a>
-                                    <ul class="subM03">
+                                    <ul class="ssubM">
                                         <li><a href="#">연간 국가기술자격 시험일정</a></li>
                                         <li><a href="#">연간 전문자격 시험일정</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">필기시험안내</a>
-                                    <ul class="subM04">
+                                    <ul class="ssubM">
                                         <li><a href="#">필기시험접수안내</a></li>
                                         <li><a href="#">필기시험수수료</a></li>
                                         <li><a href="#">필기관할구역안내</a></li>
@@ -135,7 +135,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">실기시험안내</a>
-                                    <ul class="subM05">
+                                    <ul class="ssubM">
                                         <li><a href="#">필기시험면제기간</a></li>
                                         <li><a href="#">실기시험접수안내</a></li>
                                         <li><a href="#">실기시험선택분야</a></li>
@@ -146,23 +146,23 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">자격정보</a>
-                                    <ul class="subM06">
+                                    <ul class="ssubM">
                                         <li><a href="#">국가자격</a></li>
                                         <li><a href="#">민간자격</a></li>
                                         <li><a href="#">외국자격</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">자격검정통계</a>
-                                    <ul class="subM07">
+                                    <ul class="ssubM">
                                         <li><a href="#">총괄현황</a></li>
                                         <li><a href="#">종목별현황</a></li>
                                         <li><a href="#">국가기술자격통계연보</a></li>
                                         <li><a href="#">수험자동향</a></li>
-                                        <li><a href="#">지역별 자격취득 현황황</a></li>
+                                        <li><a href="#">지역별 자격취득 현황</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">국가기술자격 대여 근절 캠페인</a>
-                                    <ul class="subM08">
+                                    <ul class="ssubM">
                                         <li><a href="#">불법대여 신고</a></li>
                                         <li><a href="#">대여 근절 캠페인</a></li>
                                     </ul>
@@ -171,64 +171,68 @@
                                 <li><a href="#">자격 취득자 교육훈련</a></li>
                             </ul>
                         </div>
-                    </li>                   
+                    </li>                    
                     <li><a href="#">전문자격시험</a>
-                        <div class="sub02">
+                        <div class="sub00">
                             <ul class="subMenu subMenu02">
-                                <p class="subcolor">클릭하시면 해당 전문자격 홈페이지로 이동됩니다.</p>
-                                <div>
-                                    <li><a href="#">가맹거래사</a></li>
-                                    <li><a href="#">감정사</a></li>
-                                    <li><a href="#">감정평가사</a></li>
-                                    <li><a href="#">검량사</a></li>
-                                    <li><a href="#">검수사</a></li>
-                                    <li><a href="#">경매사</a></li>
-                                    <li><a href="#">경비지도사</a></li>
-                                    <li><a href="#">경영지도사</a></li>
-                                </div>
-                                <div>
-                                    <li><a href="#">공인노무사</a></li>
-                                    <li><a href="#">공인중개사</a></li>
-                                    <li><a href="#">관광통역안내사</a></li>
-                                    <li><a href="#">기술지도사</a></li>
-                                    <li><a href="#">농산물품질관리사</a></li>
-                                    <li><a href="#">문화재수리기능자</a></li>
-                                    <li><a href="#">문화재수리기술자</a></li>
-                                    <li><a href="#">물류관리사</a></li>
-                                </div>
-                                <div>
-                                    <li><a href="#">박물관 및 미술관 준학예사</a></li>
-                                    <li><a href="#">변리사</a></li>
-                                    <li><a href="#">사회복지사1급</a></li>
-                                    <li><a href="#">산업보건지도사</a></li>
-                                    <li><a href="#">산업안전지도사</a></li>
-                                    <li><a href="#">세무사</a></li>
-                                    <li><a href="#">소방시설관리사</a></li>
-                                    <li><a href="#">소방안전교육사</a></li>    
-                                </div>                                
-                                <div>
-                                    <li><a href="#">손해평가사</a></li>
-                                    <li><a href="#">수산물품질관리사</a></li>
-                                    <li><a href="#">정수시설운영관리사</a></li>
-                                    <li><a href="#">주택관리사보</a></li>
-                                    <li><a href="#">청소년상담사</a></li>
-                                    <li><a href="#">청소년지도사</a></li>
-                                    <li><a href="#">한국어교육능력검정시험</a></li>
-                                    <li><a href="#">행정사</a></li>    
-                                </div>
-                                <div>
-                                    <li><a href="#">호텔경영사</a></li>
-                                    <li><a href="#">호텔관리사</a></li>
-                                    <li><a href="#">호텔서비스사</a></li>
-                                </div>
+                                <li>
+                                    <p class="subcolor">클릭하시면 해당 전문자격 홈페이지로 이동됩니다.</p>
+                                </li>
+                                <li>
+                                    <div class="subMpro">
+                                       <a href="#">가맹거래사</a>
+                                       <a href="#">감정사</a>
+                                       <a href="#">감정평가사</a>
+                                       <a href="#">검량사</a>
+                                       <a href="#">검수사</a>
+                                       <a href="#">경매사</a>
+                                       <a href="#">경비지도사</a>
+                                       <a href="#">경영지도사</a>
+                                    </div>
+                                    <div class="subMpro">
+                                       <a href="#">공인노무사</a>
+                                       <a href="#">공인중개사</a>
+                                       <a href="#">관광통역안내사</a>
+                                       <a href="#">기술지도사</a>
+                                       <a href="#">농산물품질관리사</a>
+                                       <a href="#">문화재수리기능자</a>
+                                       <a href="#">문화재수리기술자</a>
+                                       <a href="#">물류관리사</a>
+                                    </div>
+                                    <div class="subMpro">
+                                        <a href="#">박물관 및 미술관 준학예사</a>
+                                        <a href="#">변리사</a>
+                                        <a href="#">사회복지사1급</a>
+                                        <a href="#">산업보건지도사</a>
+                                        <a href="#">산업안전지도사</a>
+                                        <a href="#">세무사</a>
+                                        <a href="#">소방시설관리사</a>
+                                        <a href="#">소방안전교육사</a>  
+                                    </div>
+                                    <div class="subMpro">
+                                        <a href="#">손해평가사</a>
+                                        <a href="#">수산물품질관리사</a>
+                                        <a href="#">정수시설운영관리사</a>
+                                        <a href="#">주택관리사보</a>
+                                        <a href="#">청소년상담사</a>
+                                        <a href="#">청소년지도사</a>
+                                        <a href="#">한국어교육능력검정시험</a>
+                                        <a href="#">행정사</a>
+                                    </div>
+                                    <div class="subMpro">
+                                        <a href="#">호텔경영사</a>
+                                        <a href="#">호텔관리사</a>
+                                        <a href="#">호텔서비스사</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#">자격증/확인서</a>
-                        <div class="sub03">
+                        <div class="sub00">
                             <ul class="subMenu subMenu03">
-                                <li class="sub01"><a href="#">자격증발급안내</a>
-                                    <ul>
+                                <li><a href="#">자격증발급안내</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">자격증발급/발급문의</a></li>
                                         <li><a href="#">신규/인정/재발급/상장형</a></li>
                                         <li><a href="#">기능사보기능자격부여</a></li>
@@ -238,28 +242,28 @@
                                         <li><a href="#">폐지종목자격발급</a></li>
                                     </ul>
                                 </li>
-                                <li class="sub02"><a href="#">자격증발급</a>
-                                    <ul>
+                                <li><a href="#">자격증발급</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">자격증발급신청</a></li>
                                         <li><a href="#">자격증발급신청내역조회</a></li>
                                     </ul>
                                 </li>
-                                <li class="sub03"><a href="#">확인서발급</a>
-                                    <ul>
+                                <li><a href="#">확인서발급</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">확인서발급안내</a></li>
                                         <li><a href="#">확인서발급신청</a></li>
                                         <li><a href="#">확인서발급내역</a></li>
                                         <li><a href="#">기능경기확인서신청</a></li>
                                     </ul>
                                 </li>
-                                <li class="sub04"><a href="#">자격취득/미발급조회</a>
-                                    <ul>
+                                <li><a href="#">자격취득/미발급조회</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">자격증취득조회</a></li>
                                         <li><a href="#">자격증미발급조회</a></li>
                                     </ul>
                                 </li>
-                                <li class="sub05"><a href="#">자격증/확인서진위확인</a>
-                                    <ul>
+                                <li><a href="#">자격증/확인서진위확인</a>
+                                    <ul class="ssubM">
                                         <li><a href="#">자격증진위확인</a></li>
                                         <li><a href="#">확인서진위확인</a></li>
                                         <li><a href="#">단체진위확인</a></li>
@@ -269,10 +273,10 @@
                         </div>
                     </li>
                     <li><a href="#">고객지원</a>
-                        <div class="sub04">
+                        <div class="sub00">
                             <ul class="subMenu subMenu04">
                                 <li><a href="#">공지사항</a>
-                                    <ul>
+                                    <ul class="ssubM">
                                         <li><a href="#">공지사항</a></li>
                                         <li><a href="#">자격제도</a></li>
                                         <li><a href="#">시행자료</a></li>
@@ -282,14 +286,14 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">이용안내</a>
-                                    <ul>
+                                    <ul class="ssubM">
                                         <li><a href="#">사이트 이용방법</a></li>
                                         <li><a href="#">자주찾는 질문</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">고객참여</a></li>
                                 <li><a href="#">자료실</a>
-                                    <ul>
+                                    <ul class="ssubM">
                                         <li><a href="#">각종서식자료</a></li>
                                         <li><a href="#">출제기준</a></li>
                                         <li><a href="#">기출문제(기술사)</a></li>
@@ -299,14 +303,14 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">환불안내</a>
-                                    <ul>
+                                    <ul class="ssubM">
                                         <li><a href="#">기술자격환불안내</a></li>
                                         <li><a href="#">전문자격환불안내</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">가치드림방</a></li>
                                 <li><a href="#">정보공개</a>
-                                    <ul>
+                                    <ul class="ssubM">
                                         <li><a href="#">공공데이터 개방</a></li>
                                         <li><a href="#">자격정보 오픈 API 서비스</a></li>
                                     </ul>
@@ -338,25 +342,25 @@
                     <div id="loginArea">
                         <div class="enter">
                             <form action="login.jsp" method="post" id="login" name="loginForm">
-                                <fieldset>
-                                    <div class="left">
+                                    <fieldset>
                                         <legend>회원 로그인 폼</legend>
-                                        <p>
-                                            <label for="userId"><img src="images/usericon.png" alt=""></label>
-                                            <input type="text" name="userId" id="userId" placeholder="아이디">
-                                        </p>
-                                        <p>
-                                            <label for="userPw"><img src="images/usericonp.png" alt=""></label>
-                                            <input type="password" name="userPw" id="userPw" placeholder="비밀번호">
-                                        </p>
-                                    </div>
-                                    <div class="right">
-                                        <button type="submit">로그인</button>
-                                    </div>
-                                </fieldset>
+                                        <div class="left">
+                                            <p>
+                                                <label for="userId"><img src="images/usericon.png" alt=""></label>
+                                                <input type="text" name="userId" id="userId" placeholder="아이디">
+                                            </p>
+                                            <p>
+                                                <label for="userPw"><img src="images/usericonp.png" alt=""></label>
+                                                <input type="password" name="userPw" id="userPw" placeholder="비밀번호">
+                                            </p>
+                                        </div>
+                                        <div class="right">
+                                            <button type="submit">로그인</button>
+                                        </div>
+                                    </fieldset>                                
                             </form>
                             <p><a href="#">아이디 찾기 / 비밀번호 재설정 
-                                <img src="images/go_btn.png" alt="go" width="10px">
+                                <img src="images/go_btn.png" alt="go" width="10">
                             </a></p>
                         </div>
                         <div class="info">
@@ -388,8 +392,8 @@
         </div>
         <!-- 로그인 영역 종료 -->
     
-        <!-- 푸터 영역 시작 -->
-        <footer>
+         <!-- 푸터 영역 시작 -->
+         <footer>
             <div class="footer"> 
                 <div class="footer_top">
                     <ul>
@@ -402,7 +406,7 @@
                         <a href="#"><img src="images/btn_pdf_down.gif" alt="아크로벳리더"></a>
                     </div>                
                     <div class="site_go">
-                        <select title="관련사이트 선택" id="relSite" >
+                        <select title="관련사이트 선택">
                             <option>관련사이트</option>
                             <option value="#">공단홈페이지</option>
                             <option value="#">한국직업방송</option>
@@ -415,7 +419,7 @@
                             <option value="#">HRD-Net 직업능력지식포털</option>
                         </select>
                         <button class="move" id="goRelSite" title="새 창"><span>이동</span></button>
-                        <select title="관련사이트 선택" id="relSite">
+                        <select title="관련사이트 선택">
                             <option>국가전문자격 홈페이지</option>
                             <option value="#">가맹거래사</option>
                             <option value="#">감정사</option>
@@ -458,8 +462,8 @@
                         <button class="move"  title="새 창"><span>이동</span></button>
                     </div>
                 </div>
-                 <!-- 배너 영역 시작 -->
-                 <div class="footer_bn">
+                <!-- 배너 영역 시작 -->
+                <div class="footer_bn">
                     <strong class="logo1">
                         <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110"><img src="images/btn_wa_re.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치">
                         </a>
@@ -484,7 +488,7 @@
                         <img src="images/btn_award3.png" alt="2017 대한민국 전자정부 대상 우수상(행정안전부 장관상) 수상" title="2017 데이터베이스품질대상수상">
                         </a>
                     </strong>
-                </div>             
+                </div>            
                 <!-- 배너 영역 종료 -->
                 <div class="footer_address">
                     <img class="footer_logo" src="images/logo_footer.png" alt="HRDK로고">

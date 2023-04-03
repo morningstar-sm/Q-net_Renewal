@@ -82,7 +82,7 @@ input#address {
     display: block;
     margin: 10px 0;
 }
-#joinForm input[type="emailId"] {
+#joinForm input[name="emailId"] {
     width: 120px;
 }
 #joinForm input[type=email] {

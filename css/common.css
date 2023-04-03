@@ -57,12 +57,9 @@ fieldset {
       url(font/webcafeIcon.ttf) format("truetype"),
       url(font/webcafeIcon.svg#webcaferegular) format("svg");
   }
+
 /* 링크스타일 */
-a:link { 
-    color: #4f4f4f;
-    text-decoration: none;
-}
-a:visited { 
+a:link, a:visited { 
     color: #4f4f4f;
     text-decoration: none;
 }
@@ -86,6 +83,7 @@ body {
     color: #fff;
     z-index: 10; /*다른것보다 먼저 나오게 만듦*/
 }
+
 /* 전체적인 레이아웃 설계 */
 #header, #container, #footer {
     width: 1200px;
@@ -103,6 +101,7 @@ body {
     top: 60px;
     left: 50px;
 }
+
 /* 탑메뉴 */
 .topmenu {
     height: 40px;
@@ -124,7 +123,7 @@ body {
 .topLink > li {
     float: left;
     margin: 20px 0 0 -24px;
-    height: 28px;
+    height: 35px;
     /* border-radius: 0 100px 0 100px; */
     /* border-radius: 10px 80px 15px 70px / 70px 15px 70px 15px; */
     border-radius: 10px 50px 15px 35px / 10px 35px 0px 5px;
@@ -144,6 +143,12 @@ body {
     position: relative;
     top: 15px;
     right: 20px;
+}
+.topLink > li:hover {
+    top: -6px;
+}
+.topLink > li:first-child:hover {
+    top: 0px;
 }
 .topLink > li:nth-child(1) {
     position: relative;
@@ -209,19 +214,19 @@ body {
 }
 .infoLink > li:last-child {
     position: absolute;
-    right: 30px;
-    top: 10px;
+    right: 37px;
+    top: 15px;
 }
 .infoLink .zoom button {
     background-color: rgba(0, 0, 0, 0);
-    padding: 0;
+    padding: 0 2px;
     border: none;
     font-size: 16px;
     color: #016aba;
-    text-shadow: 1px 0px 1px #89ceeb,
-                 0px 1px 1px #89ceeb,
-                -1px 0px 1px #89ceeb,
-                 0px -1px 1px #89ceeb;
+    text-shadow: 1px 0px 0px #89ceeb,
+                 0px 1px 0px #89ceeb,
+                -1px 0px 0px #89ceeb,
+                 0px -1px 0px #89ceeb;
     font-weight: bold;
 }
 
@@ -251,7 +256,6 @@ body {
     border-radius: 35px;
     padding: 10px;
     color: #01345b;
-    size: 16px;
 }
 #search .sub01 select:focus {
     outline: none;
@@ -264,7 +268,6 @@ body {
     padding: 10px;
     border: none;
     color: #01345b;
-    size: 16px;
     text-indent: 10px;
 }
 #search .sub02 input:focus {
@@ -289,41 +292,65 @@ body {
     font-weight: bold;
     top: -15px;
 }
-#search .sub04 img {
+.mypage img {
     width: 25px;
     margin-right: 10px;
 }
-#search .sub04 span {
+.mypage span {
     position: relative;
     top: -6px; 
+}
+.mypage span:hover {
+    color: #0195d3;
+    background-image: url('../images/bg_gnb_05.png');
 }
 
 /*----------- 메인메뉴 영역----------- */
 #nav {
     position: relative;
 }
-#nav .mainMenu{
-    padding: 10px;
-    height: 35px;
+/* 메뉴 배경 */
+.subMenu_bg {
+    width: 100%;
+    height: 320px;
+    margin: 0 auto;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 10;
+    /* background-image : url("../images/bg_gnb_01.png"); */
+    /* border-top: 2px solid #89ceeb; */
+    border-bottom: 2px solid #89ceeb;
+    box-shadow: 1px 1px 3px rgba(137, 206, 235, 0.2);
+    display: none;
 }
 /* 햄버거메뉴 */
-.mainMenu .total {
+.total {
     background: none;
     border: none;
     position: absolute;
-    left: 50px;
+    top: 5px;
+    left: 80px;
+    cursor: default;
+    /* 메뉴 추가 전까지는 cusor: default */
 }
-.mainMenu .total> img {
+.total> img {
     width: 30px;
 }
 
-.mainMenu > li { /*-- 상위메뉴 --*/
-    float: left;
-    position: relative;
-    left: 110px;
-    top: 5px;
-    height: 30px;
+
+/*-- 상위메뉴 --*/
+.mainMenu{
     z-index: 20;
+    padding: 10px 10px 10px 0;
+    height: 35px;
+    margin-left: 120px;
+    margin-top : 5px;
+    /* border-bottom: 2px solid #89ceeb; */
+}
+.mainMenu > li { 
+    float: left;
+    height: 35px;
     padding-right: 10px;
     font-size: 1.4em;
     font-weight: bold;
@@ -335,106 +362,129 @@ body {
 .mainMenu > li:nth-of-type(1)::before {
     content: " ";
 }
+.mainMenu > li> a {
+    padding: 20px 0;
+}
 
-/* 메뉴 배경 */
-.mainMenu div.subMenu_bg {
-    width: 100%;
-    height: 320px;
-    margin: 0 auto;
+
+/* --서브 메뉴 영역-- */
+.mainMenu > li > div {
     position: absolute;
-    top: 45px;
-    left: 0;
-    z-index: 1;
-    /* background-image : url("../images/bg_gnb_01.png"); */
-    border-bottom: 2px solid #89ceeb;
-    box-shadow: 1px 1px 3px rgba(137, 206, 235, 0.2);
-    display: none;
-}
-/* 서브 메뉴 영역 */
-.mainMenu ul.subMenu { 
-    display: none;
-    /* float: left; */
-    position: absolute;
-    top: 25px;
-    z-index: 5;
+    left: 100px;
+    top: 30px;
     width: 1000px;
-    padding-top: 10px;
-    font-size: 0.8em;
-    overflow: hidden;
+    height: 300px;
+    /* border: 1px solid #118704; */
+    display: flex;
+    /* overflow: hidden; */
 }
-.mainMenu .subMenu01 {
-    height: 315px;
-}
-.mainMenu .subMenu02 {
-    height: 280px;
-    left: -125px;
-}
-.mainMenu .subMenu02 .subcolor {
+.subMenu { 
+    width: 1000px;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #016aba;
+    z-index: 5;
+    padding-top: 20px;
+    font-size: 0.8em;
+    display: none;
 }
-.mainMenu .subMenu02 div {
-    float: left;
-    margin-top: 35px;
-    padding-right: 20px;
-    border-right: 1px dashed #ccc;
+.subMenu01 {
+    height: 300px;
+    /* display: none; */
 }
-.mainMenu .subMenu03 {
-    height: 280px;
-    left: -257px;
+.subMenu02 {
+    height: 270px;
+    /* left: -125px; */
+    /* display: none; */
 }
-.mainMenu .subMenu04 {
-    height: 315px;
-    left: -397px;
+.subMenu03 {
+    height: 270px;
+    /* left: -257px; */
+    /* display: none; */
 }
-.mainMenu .subMenu li {/*-- 중간 서브메뉴 --*/
+.subMenu04 {
+    height: 300px;
+    /* left: -397px; */
+    /* display: none; */
+}
+
+/*- 중간 서브메뉴 -*/
+.subMenu li {
     /* display: flex; */
     /* flex-direction: column; */
-    /* width: 180px; */
     /* display: inline-block; */
-    margin-left: 15px;
-    padding: 4px 10px;
-    background : url("../images/bg_gnb_dot.png") no-repeat;
-    background-position: left;
+    margin-left: 12px;
+    padding: 5px 10px;
+    /* list-style: url("../images/bg_gnb_dot.png"); */
+    /* background: url("../images/bg_gnb_dot.png") no-repeat; */
+    /* background-position: left; */
 }
-.mainMenu .subMenu > li a {
-    /* display: inline-block; */
-    padding: 2px 5px;
+.subMenu > li a {
+    padding: 2px 15px;
+    background: url("../images/bg_gnb_dot.png") no-repeat;
+    background-position: 3%;
 }
-.mainMenu .subMenu div > li a {
-    /* display: inline-block; */
-    padding: 2px 5px;
+.subMenu01 li,
+.subMenu03 li,
+.subMenu04 li {
+    width: 220px;
+}
+/* 전문자격 메뉴 */
+.subMenu02 > li {
+    padding: 0;
+    list-style: none;
+}
+.subMenu .subMpro { 
+    display: inline-block;
+    vertical-align: top;
+    margin: 8px 30px 0 0;
+}
+.subMenu .subMpro a {
+    display: block;
+    margin: 3px 0;
+    padding: 2px 15px;
+    /* background-clip: content-box; */
+    background: url("../images/bg_gnb_dot.png") no-repeat;
+    background-position: 5px;
+}
+.subMenu .subcolor {
+    width: 900px;
+    text-align: center;
+    color: #016aba;
+    /* display: none; */
 }
 
-.mainMenu .subMenu li>ul { /*-- 최하위 서브메뉴 --*/
+/*-- 최하위 서브메뉴 --*/
+.subMenu .ssubM {
+    display: none;
     position: absolute;
-    left: 220px;
-    top: 13px;
+    left: 230px;
+    top: 22px;
+    padding-left: 5px;
     border-left: 1px dashed #ccc;
     height: 280px;
     width: 200px;
-    display: none;
     line-height: 1.0em;
     font-size: 12px;
+    z-index: 50;
 }
-.mainMenu .subMenu03 li>ul {
-    height: 270px;
+.subMenu .ssubM a{
+    padding: 2px 15px;
 }
 
 
 
-/* 메뉴호버 */
+
+/* 최하위 메뉴호버 */
+/*
 .mainMenu .subMenu > li:hover > a {
-    /* color : #0195d3; */
+    color : #0195d3;
 }
 .mainMenu .subMenu li.on > ul {
     display: block;
     background-color: #fff;
     position: absolute;
     z-index: 50;
-}
+}*/
+
 /* 헤더 영역 끝 */
 
 
@@ -493,19 +543,19 @@ footer {
 /* 배너 */
 .footer_bn {
     float: left;
-    margin-left: 199px;
+    margin-left: 195px;
     position: relative;
     z-index: 10;
 }
 .footer_bn strong {
     display: inline-block;
     width: 160px;
-    margin: 5px;
- 
+    margin: 4px;
 }
 .footer_bn strong img {
     border: 1px solid #ccc;
-    width: 150px;
+    border-radius: 10px;
+    width: 160px;
     height: 50px;
     z-index: 20;
 }

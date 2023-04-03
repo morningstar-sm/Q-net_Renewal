@@ -19,7 +19,7 @@ $('.left_control').click(function() {
         index--;
         moveSlider(index);
     } else {
-        $('.slider_panel').css('left',-1250);
+        $('.slider_panel').css('left',-1200);
         index = 4;
         moveSlider(index);
     }
@@ -68,7 +68,7 @@ function moveSlider(index) {
         $('.left_control').fadeOut(100);
     }
     $('.slider_panel').animate({
-        left : -(index*250)
+        left : -(index*240)
     },'slow');
 }
 
