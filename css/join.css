@@ -85,7 +85,7 @@ input#address {
 #joinForm input[name="emailId"] {
     width: 120px;
 }
-#joinForm input[type=email] {
+#joinForm input[name="emailDomain"] {
     width: 180px;
 }
 #joinForm select[name=mail] {
