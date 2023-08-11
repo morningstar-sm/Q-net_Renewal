@@ -1,5 +1,9 @@
-# Q-net_Remodelling
+# Q-net_Renewal
 
-First Front-end Project.
-Q-net 메인페이지를 리디자인한 프로젝트 입니다.
+**First** Project. & **Front-end** semi Project.
+Q-net 메인페이지를 리뉴얼한 프로젝트 입니다.
 
+기존 로고의 색감은 유지하면서 레이아웃은 보기좋게 바꾸고, 
+오래되어 깨진 이미지 정도 등 일부만 변경해보았습니다.
+자격증 시험 접수를 더 효율적으로 할 수 있게
+진행중인 시험접수는 이미지 슬라이드로 영역을 확장시켰습니다.
